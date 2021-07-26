@@ -11,7 +11,7 @@ import SwiftUI
 struct UpSquarePracticalApp: App {
     var body: some Scene {
         WindowGroup {
-            Color.blue
+            SongListView()
         }
     }
 }

@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD55169A26AEDF7600F0C9DB /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55169926AEDF7600F0C9DB /* View+Ext.swift */; };
 		BD55252626AED24700BE0EA0 /* UpSquarePracticalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55252526AED24700BE0EA0 /* UpSquarePracticalApp.swift */; };
 		BD55252A26AED24900BE0EA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD55252926AED24900BE0EA0 /* Assets.xcassets */; };
 		BD55252D26AED24900BE0EA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD55252C26AED24900BE0EA0 /* Preview Assets.xcassets */; };
+		BDB2577B26AED4C1002F4870 /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB2577A26AED4C1002F4870 /* SongListViewModel.swift */; };
+		BDB2578026AED4D7002F4870 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB2577F26AED4D7002F4870 /* SongListView.swift */; };
+		BDB2578426AED511002F4870 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB2578326AED511002F4870 /* SongModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD55169926AEDF7600F0C9DB /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		BD55252226AED24700BE0EA0 /* UpSquarePractical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpSquarePractical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD55252526AED24700BE0EA0 /* UpSquarePracticalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpSquarePracticalApp.swift; sourceTree = "<group>"; };
 		BD55252926AED24900BE0EA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD55252C26AED24900BE0EA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD55252E26AED24900BE0EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDB2577A26AED4C1002F4870 /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
+		BDB2577F26AED4D7002F4870 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
+		BDB2578326AED511002F4870 /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 		BDB2577326AED401002F4870 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDB2578326AED511002F4870 /* SongModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,6 +104,7 @@
 		BDB2577526AED413002F4870 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				BDB2577926AED4AE002F4870 /* SongList */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -102,8 +112,18 @@
 		BDB2577626AED41C002F4870 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				BD55169926AEDF7600F0C9DB /* View+Ext.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BDB2577926AED4AE002F4870 /* SongList */ = {
+			isa = PBXGroup;
+			children = (
+				BDB2577A26AED4C1002F4870 /* SongListViewModel.swift */,
+				BDB2577F26AED4D7002F4870 /* SongListView.swift */,
+			);
+			path = SongList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +196,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD55252626AED24700BE0EA0 /* UpSquarePracticalApp.swift in Sources */,
+				BDB2578026AED4D7002F4870 /* SongListView.swift in Sources */,
+				BDB2578426AED511002F4870 /* SongModel.swift in Sources */,
+				BD55169A26AEDF7600F0C9DB /* View+Ext.swift in Sources */,
+				BDB2577B26AED4C1002F4870 /* SongListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
