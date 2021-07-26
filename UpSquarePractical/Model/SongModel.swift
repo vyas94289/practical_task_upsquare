@@ -16,8 +16,6 @@ import Foundation
 struct SongModel: Codable {
     let resultCount: Int
     let results: [Song]
-    
-    
 }
 
 struct Song: Codable, Identifiable {

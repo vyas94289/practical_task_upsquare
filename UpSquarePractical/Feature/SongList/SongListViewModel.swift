@@ -9,11 +9,28 @@ import Combine
 import Foundation
 
 class SongListViewModel: ObservableObject {
-    @Published var allTracks: [Song] = []
+    @Published var allTracks: [TrackViewModel] = []
     @Published var viewState: SongListViewState = .idle
     var bag = Set<AnyCancellable>()
     
-    private func getSongInfo() {
+    init() {
+        observeStoppdURL()
+    }
+    
+    func observeStoppdURL() {
+        AudioSession.shared.stoppedUrlSubject.sink { (stoppedUrl) in
+            self.stopPlaying(at: stoppedUrl)
+        }.store(in: &bag)
+    }
+    
+    private func stopPlaying(at url: URL) {
+        guard let model = allTracks.first(where: {$0.localUrl == url}) else {
+            return
+        }
+        model.stopTrack()
+    }
+    
+    func getSongInfo() {
         guard let url = URL(string: "https://itunes.apple.com/search?term=jack+johnson&limit=50") else {
             return
         }
@@ -31,9 +48,8 @@ class SongListViewModel: ObservableObject {
                     self.viewState = .error(error.localizedDescription)
                 }
             }, receiveValue: { tracks in
-                self.allTracks = tracks
+                self.allTracks = tracks.map({TrackViewModel(track: $0)})
                 self.viewState = .loaded
-                
             }).store(in: &bag)
     }
 }
